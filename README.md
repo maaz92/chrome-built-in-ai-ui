@@ -12,10 +12,6 @@ This Chrome Sidepanel Extension provides a UI for the 7 Chrome Built-in AI APIs.
 
 To learn more about the APIs head over to the [docs on developer.chrome.com](https://developer.chrome.com/docs/ai/built-in-apis).
 
-## Overview
-
-This example sets a welcome side panel when the extension is first installed, then when the user navigates to a different tab, it replaces it with the main side panel.
-
 ## Running this extension
 
 1. Clone this repository.
