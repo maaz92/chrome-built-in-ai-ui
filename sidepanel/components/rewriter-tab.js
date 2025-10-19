@@ -84,6 +84,69 @@ class RewriterTab extends HTMLElement {
   </label>
 </div>
 </fieldset>
+  <fieldset>
+      <div><small>Tone:</small></div>
+<div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-tone" id="rewriter-tone-more-formal" value="more-formal">
+  <label class="form-check-label fs-8" for="rewriter-tone">
+    More Formal
+  </label>
+</div>
+<div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-tone" id="rewriter-tone-as-is" value="as-is" checked>
+  <label class="form-check-label fs-8" for="rewriter-tone">
+    As is
+  </label>
+</div>
+<div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-tone" id="rewriter-tone-more-casual" value="more-casual">
+  <label class="form-check-label fs-8" for="rewriter-tone">
+    More Casual
+  </label>
+</div>
+</fieldset>
+  <fieldset>
+    <div><small>Format:</small></div>
+  <div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-format" id="rewriter-format-markdown" value="markdown">
+  <label class="form-check-label fs-8" for=rewriter-format">
+    Markdown
+  </label>
+</div>
+<div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-format" id="rewriter-format-as-is" value="as-is" checked>
+  <label class="form-check-label fs-8" for="rewriter-format">
+    As is
+  </label>
+</div>
+  <div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-format" id="rewriter-format-plain-text" value="plain-text">
+  <label class="form-check-label fs-8" for="rewriter-format">
+    Plain-text
+  </label>
+</div>
+</fieldset>
+  <fieldset>
+  <div><small>Length:</small></div>
+    <div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-length" id="rewriter-length-shorter" value="shorter">
+  <label class="form-check-label fs-8" for="rewriter-length">
+    Shorter
+  </label>
+</div>
+  <div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-length" id="writer-length-as-is" value="as-is" checked>
+  <label class="form-check-label fs-8" for="rewriter-length">
+    As is
+  </label>
+</div>
+  <div class="form-check-inline">
+  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-length" id="rewriter-length-longer" value="longer">
+  <label class="form-check-label fs-8" for="rewriter-length">
+    Longer
+  </label>
+</div>
+</fieldset>
 <div class="pt-2 text-center">
         <button class="btn btn-sm btn-primary" id="rewriter-new-session"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-repeat" viewBox="0 0 16 16">
   <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"/>
@@ -113,77 +176,6 @@ class RewriterTab extends HTMLElement {
 
         <input-with-language-detector label="Input" id="rewriter-input"></input-with-language-detector>
           <input-with-language-detector label="Context" id="rewriter-context"></input-with-language-detector>
-  <div class="row">
-  <div class="col">
-  <fieldset>
-      <div><small>Tone:</small></div>
-<div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-tone" id="rewriter-tone-more-formal" value="more-formal">
-  <label class="form-check-label fs-8" for="rewriter-tone">
-    More Formal
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-tone" id="rewriter-tone-as-is" value="as-is" checked>
-  <label class="form-check-label fs-8" for="rewriter-tone">
-    As is
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-tone" id="rewriter-tone-more-casual" value="more-casual">
-  <label class="form-check-label fs-8" for="rewriter-tone">
-    More Casual
-  </label>
-</div>
-</fieldset>
-</div>
-  <div class="col">
-  <fieldset>
-    <div><small>Format:</small></div>
-  <div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-format" id="rewriter-format-markdown" value="markdown">
-  <label class="form-check-label fs-8" for=rewriter-format">
-    Markdown
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-format" id="rewriter-format-as-is" value="as-is" checked>
-  <label class="form-check-label fs-8" for="rewriter-format">
-    As is
-  </label>
-</div>
-  <div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-format" id="rewriter-format-plain-text" value="plain-text">
-  <label class="form-check-label fs-8" for="rewriter-format">
-    Plain-text
-  </label>
-</div>
-</fieldset>
-</div>
-  <div class="col">
-  <fieldset>
-  <div><small>Length:</small></div>
-    <div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-length" id="rewriter-length-shorter" value="shorter">
-  <label class="form-check-label fs-8" for="rewriter-length">
-    Shorter
-  </label>
-</div>
-  <div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-length" id="writer-length-as-is" value="as-is" checked>
-  <label class="form-check-label fs-8" for="rewriter-length">
-    As is
-  </label>
-</div>
-  <div class="form-check">
-  <input class="form-check-input form-check-input-sm" type="radio" name="rewriter-length" id="rewriter-length-longer" value="longer">
-  <label class="form-check-label fs-8" for="rewriter-length">
-    Longer
-  </label>
-</div>
-</fieldset>
-</div>
-</div>
   <div class="pt-2 text-center"><button class="btn btn-sm btn-primary" id="rewrite-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-magic" viewBox="0 0 16 16">
   <path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707zM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1zM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707zM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0z"/>
 </svg>Rewrite</button></div>
@@ -338,6 +330,9 @@ No Active Session. Please create a session in configuration.
         expectedContextLanguages: state.expectedContextLanguages,
         expectedInputLanguages: state.expectedInputLanguages,
         outputLanguage: state.outputLanguage, //state.language,
+        tone: state.tone,
+        format: state.format,
+        length: state.length,
       });
       return availability;
     };
@@ -352,6 +347,9 @@ No Active Session. Please create a session in configuration.
         expectedContextLanguages: state.expectedContextLanguages,
         expectedInputLanguages: state.expectedInputLanguages,
         outputLanguage: state.outputLanguage, //state.language,
+        tone: state.tone,
+        format: state.format,
+        length: state.length,
         monitor(m) {
           m.addEventListener("downloadprogress", (e) => {
             rewriterDownloadProgressBars.forEach((bar) => {
@@ -463,9 +461,6 @@ No Active Session. Please create a session in configuration.
       rewriteAccordionCollapse.hide();
       const rewriterStream = rewriter.rewriteStreaming(state.text, {
         context: state.context,
-        tone: state.tone,
-        format: state.format,
-        length: state.length,
       });
       console.log(state);
       outputText.setAttribute("text", "");
