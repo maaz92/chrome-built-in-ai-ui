@@ -664,6 +664,7 @@ No Active Session. Please create a session in configuration.
       showUILoader();
       console.log(state);
       if (state.promptInputOption == "schema") {
+        qs("textarea.prompt-chat-box-input", promptChat).value = "";
         const schema = JSON.parse(state.schema);
         promptChat.setAttribute("new-user-message", state.text);
         promptChat.setAttribute(
@@ -673,6 +674,7 @@ No Active Session. Please create a session in configuration.
           })
         );
       } else if (state.promptInputOption == "prefix") {
+        qs("textarea.prompt-chat-box-input", promptChat).value = "";
         promptChat.setAttribute("new-user-message", state.text);
         promptChat.setAttribute(
           "new-assistant-chunk",
@@ -683,7 +685,7 @@ No Active Session. Please create a session in configuration.
         );
       } else {
         element.controller = new AbortController();
-        qs("textarea", promptChat).value = "";
+        qs("textarea.prompt-chat-box-input", promptChat).value = "";
         promptChat.setAttribute("new-user-message", state.text);
         const promptStream = languageModel.promptStreaming(state.text, {
           signal: element.controller.signal,
