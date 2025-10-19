@@ -1,0 +1,23 @@
+{
+  "name": "Chrome Built-in AI UI",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "sidepanel/index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs"
+  },
+  "keywords": [],
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "@mozilla/readability": "0.5.0",
+    "@rollup/plugin-commonjs": "28.0.1",
+    "@rollup/plugin-node-resolve": "15.3.0",
+    "@rollup/plugin-terser": "0.4.4",
+    "dompurify": "3.1.7",
+    "htmlparser2": "^10.0.0",
+    "marked": "14.1.4",
+    "rollup": "4.24.4",
+    "rollup-plugin-copy": "3.5.0"
+  }
+}
