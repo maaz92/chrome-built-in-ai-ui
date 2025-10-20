@@ -338,6 +338,10 @@ No Active Session. Please create a session in configuration.
       console.log(state);
       writerSettingsAccordionCollapse.hide();
       writerAccordionCollapse.show();
+      writerDownloadProgressBars.forEach((bar) => {
+        bar.classList.remove("d-none");
+        bar.classList.add("d-block");
+      });
       return await Writer.create({
         sharedContext: state.sharedContext,
         expectedContextLanguages: state.expectedContextLanguages,

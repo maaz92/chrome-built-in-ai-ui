@@ -85,6 +85,10 @@ class TranslatorTab extends HTMLElement {
     const downloadTranslatorForGivenLanguages = async () => {
       const state = getState();
       console.log(state);
+      translatorDownloadProgressBars.forEach((bar) => {
+        bar.classList.remove("d-none");
+        bar.classList.add("d-block");
+      });
       return await Translator.create({
         sourceLanguage: state.sourceLanguage,
         targetLanguage: state.targetLanguage,
@@ -169,7 +173,7 @@ class TranslatorTab extends HTMLElement {
       const availability = await checkTranslatorAvailability();
       if (availability === "available") {
         const translator = await downloadTranslatorForGivenLanguages();
-        translate(translator);
+        await translate(translator);
       } else if (availability === "downloadable") {
         // show modal;
         await showDownloadAlert();
@@ -189,10 +193,10 @@ class TranslatorTab extends HTMLElement {
       const sleep = (ms) => {
         return new Promise((resolve) => setTimeout(resolve, ms));
       };
-      while (checkTranslatorAvailability() != "available") {
-        await sleep(100);
+      while ((await checkTranslatorAvailability()) != "available") {
+        await sleep(200);
       }
-      translate(translator);
+      await translate(translator);
     };
 
     const handleTranslatorDownloadCancellation = async (event) => {

@@ -347,6 +347,10 @@ No Active Session. Please create a session in configuration.
       console.log(state);
       summarizerSettingsAccordionCollapse.hide();
       summarizerAccordionCollapse.show();
+      summarizerDownloadProgressBars.forEach((bar) => {
+        bar.classList.remove("d-none");
+        bar.classList.add("d-block");
+      });
       return await Summarizer.create({
         sharedContext: state.sharedContext,
         expectedContextLanguages: state.expectedContextLanguages,

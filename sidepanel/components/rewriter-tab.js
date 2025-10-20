@@ -342,6 +342,10 @@ No Active Session. Please create a session in configuration.
       console.log(state);
       rewriteSettingsAccordionCollapse.hide();
       rewriteAccordionCollapse.show();
+      rewriterDownloadProgressBars.forEach((bar) => {
+        bar.classList.remove("d-none");
+        bar.classList.add("d-block");
+      });
       return await Rewriter.create({
         sharedContext: state.sharedContext,
         expectedContextLanguages: state.expectedContextLanguages,

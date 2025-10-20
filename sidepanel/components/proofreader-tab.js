@@ -213,6 +213,10 @@ No Active Session. Please create a session in configuration.
       console.log(state);
       proofreaderSettingsAccordionCollapse.hide();
       proofreaderAccordionCollapse.show();
+      proofreaderDownloadProgressBars.forEach((bar) => {
+        bar.classList.remove("d-none");
+        bar.classList.add("d-block");
+      });
       return await Proofreader.create({
         expectedInputLanguages: state.expectedInputLanguages,
         outputLanguage: state.outputLanguage, //state.language,

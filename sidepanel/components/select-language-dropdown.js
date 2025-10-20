@@ -79,7 +79,7 @@ class SelectLanguageDropDown extends HTMLElement {
   addEventDispatchers(element) {
     Array.from(element.querySelectorAll("ul > li > a")).forEach((el) =>
       el.addEventListener("click", async (event) => {
-        const subtag = $(event.target).attr("subtag");
+        const subtag = event.target.getAttribute("subtag");
         element.dispatchEvent(
           new CustomEvent(element.EVENTS.LANGUAGE_SELECTED, {
             detail: { subtag },
@@ -91,7 +91,7 @@ class SelectLanguageDropDown extends HTMLElement {
     element
       .querySelector("div > ul > li > input")
       .addEventListener("keyup", async (event) => {
-        const query = $(event.target).val();
+        const query = event.target.value;
         element.dispatchEvent(
           new CustomEvent(element.EVENTS.LANGUAGE_QUERIED, {
             detail: { query },
