@@ -12,6 +12,8 @@ This Chrome Sidepanel Extension provides a UI for the 7 Chrome Built-in AI APIs.
 
 To learn more about the APIs head over to the [docs on developer.chrome.com](https://developer.chrome.com/docs/ai/built-in-apis).
 
+View the demo video [here](https://youtu.be/RPaWIh8Wn14?si=6R56-8aFkCB9aSXq).
+
 ## Running this extension
 
 1. Clone this repository.
