@@ -74,7 +74,7 @@ class ProofreaderTab extends HTMLElement {
   </label>
 </div>
 <select-language-dropdown select-box-text="Correction Explanation Language" disabled></select-language-dropdown>
-<div class="pt-2 pb-2 text-center">
+<div class="pt-2 text-center">
         <button class="btn btn-sm btn-primary" id="proofreader-new-session-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-repeat" viewBox="0 0 16 16">
   <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"/>
 </svg>New Session</button>

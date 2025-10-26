@@ -31,7 +31,7 @@ class OutputText extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === "text") {
-      const cardBody = this.querySelector("div > div.card > div.card-body");
+      const cardBody = this.querySelector("div.card-body");
       if (cardBody) {
         cardBody.innerHTML = marked.parse(newValue);
       }
@@ -48,7 +48,7 @@ class OutputText extends HTMLElement {
         toastBootstrap.show();
         navigator.clipboard.writeText(
           turndownService.turndown(
-            element.querySelector("div > div.card > div.card-body")?.textContent
+            element.querySelector("div.card-body")?.textContent
           )
         );
       });
