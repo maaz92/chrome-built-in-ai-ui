@@ -2,8 +2,8 @@
 //   .setPanelBehavior({ openPanelOnActionClick: true })
 //   .catch((error) => console.error(error));
 
-const welcomePage = "dist/sidepanel/welcome.html";
-const mainPage = "dist/sidepanel/index.html";
+const welcomePage = "sidepanel/welcome.html";
+const mainPage = "sidepanel/index.html";
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.sidePanel.setOptions({ path: welcomePage });
